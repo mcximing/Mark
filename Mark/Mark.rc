@@ -1,0 +1,264 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Simplified, PRC) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\Mark.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Mark.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Mark"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
+    LTEXT           "Mark 1.5 版        作者：mcximing",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2012-2016 BJTU_ITS",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_MARK_DIALOG DIALOGEX 0, 0, 538, 393
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES | WS_EX_APPWINDOW
+CAPTION "图像标注"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_PIC,"Static",SS_BLACKFRAME,7,7,440,332
+    PUSHBUTTON      "打开视频",IDC_OPENVIDEO,468,24,50,14
+    GROUPBOX        "读取视频",IDC_STATIC,458,6,70,200
+    PUSHBUTTON      "前进>>",IDC_NEXTFRAME,468,92,50,14
+    LTEXT           "当前帧",IDC_STATIC,464,153,22,8
+    PUSHBUTTON      "后退<<",IDC_PREVFRAME,468,59,50,14
+    LTEXT           "/",IDC_STATIC,490,166,8,10
+    EDITTEXT        IDC_FRAMENUM,464,164,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "跳帧间隔",IDC_STATIC,464,188,28,8
+    PUSHBUTTON      "打开图片",IDC_OPENPIC,466,246,50,14
+    PUSHBUTTON      "保存标注",IDC_SAVE,467,315,50,14
+    EDITTEXT        IDC_FRMCOUNT,495,164,30,14,ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_STEP,498,185,21,14,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "视频和图片文件夹的指定保存路径",IDC_STATIC,237,346,210,32
+    EDITTEXT        IDC_SAVEPATH,243,360,130,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_SETSAVEPATH,376,359,20,14
+    DEFPUSHBUTTON   "退出",IDOK,466,359,50,14
+    LTEXT           "（Ctrl + <-）",IDC_STATIC,472,74,42,8
+    LTEXT           "（Ctrl + ->）",IDC_STATIC,473,108,42,8
+    LTEXT           "（Ctrl + S）/ 鼠标双击",IDC_STATIC,456,331,71,8
+    CONTROL         "响应鼠标滚轮进退",IDC_IFWHEEL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,462,130,64,10
+    GROUPBOX        "顺序读取指定文件夹中图片(支持拖放打开)",IDC_STATIC,7,346,224,32
+    EDITTEXT        IDC_IMGSPATH,13,360,130,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_SETIMGPATH,147,359,20,14
+    PUSHBUTTON      "顺次读取>>",IDC_NEXTIMG,173,359,50,14
+    PUSHBUTTON      "打开>>",IDC_OPENSVPATH,401,358,40,14
+    LTEXT           "（支持拖放打开）",IDC_STATIC,466,39,56,8
+    LTEXT           "（支持拖放打开）",IDC_STATIC,465,261,56,8
+    PUSHBUTTON      "选项设置",IDC_SETTINGS,466,217,50,14
+    PUSHBUTTON      "清除标注",IDC_CLEAR,467,281,50,14
+    LTEXT           "（鼠标右键）",IDC_STATIC,472,297,42,8
+END
+
+IDD_SET_DIALOG DIALOGEX 0, 0, 291, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "选项设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,167,161,50,14
+    PUSHBUTTON      "取消",IDCANCEL,234,161,50,14
+    CONTROL         "只保存标注框内图像",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,168,32,88,10
+    CONTROL         "只保存标注坐标记录",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,168,49,88,10
+    CONTROL         "同时保存前两项",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,168,67,72,10
+    CONTROL         "尺寸不变，直接输出原图",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,168,88,104,10
+    CONTROL         "保存全图，标注框内抹除",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,168,116,104,10
+    GROUPBOX        "输出方式选择",IDC_STATIC,151,14,122,130
+    LTEXT           "（用于视频截图）",IDC_STATIC,178,100,65,8
+    LTEXT           "（局部色块覆盖）",IDC_STATIC,178,128,65,8
+    GROUPBOX        "额外标注设置",IDC_STATIC,19,14,116,109
+    CONTROL         "扩展功能: 鼠标单击时,",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,29,33,95,10
+    LTEXT           "指定宽度(像素):",IDC_STATIC,30,67,57,8
+    LTEXT           "指定高度(像素):",IDC_STATIC,30,86,57,8
+    EDITTEXT        IDC_FIXWIDTH,95,65,24,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_FIXHEIGHT,95,84,24,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "单击选取时自动保存",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,105,88,10
+    LTEXT           "选取指定大小的标注框",IDC_STATIC,40,47,81,8
+    LTEXT           "Author:  mcximing@sina.cn",IDC_STATIC,25,163,104,9
+    CONTROL         "保存标注时按原图比例保存",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,134,112,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,6,0,0
+ PRODUCTVERSION 1,6,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "BJTU_ITS"
+            VALUE "FileDescription", "图像标注程序"
+            VALUE "FileVersion", "1.6.0.0"
+            VALUE "InternalName", "Mark.exe"
+            VALUE "LegalCopyright", "(C) <MaCong>。保留所有权利。"
+            VALUE "OriginalFilename", "Mark.exe"
+            VALUE "ProductName", "图像标注程序"
+            VALUE "ProductVersion", "1.6.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_MARK_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 531
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 386
+    END
+
+    IDD_SET_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 284
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 Mark(&A)..."
+END
+
+#endif    // Chinese (Simplified, PRC) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\Mark.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
